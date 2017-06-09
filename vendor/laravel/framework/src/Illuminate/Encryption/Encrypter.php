@@ -32,7 +32,7 @@ class Encrypter implements EncrypterContract
      *
      * @throws \RuntimeException
      */
-    public function __construct($key, $cipher = 'AES-128-CBC')
+    public function __construct($key, $cipher = 'AES-256-CBC')
     {
         $key = (string) $key;
 
@@ -40,7 +40,7 @@ class Encrypter implements EncrypterContract
             $this->key = $key;
             $this->cipher = $cipher;
         } else {
-            throw new RuntimeException('The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.');
+            throw new RuntimeException(' Erorr:: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.');
         }
     }
 
